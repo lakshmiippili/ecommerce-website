@@ -1,24 +1,18 @@
 import React from "react";
-import Button from "../UI/Button/Button";
-import classes from "./Header.module.css";
-const Header = () => {
+import "./Header.css";
+const Header = (props) => {
   return (
-    <nav className={classes.nav}>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="./index.html">Store</a>
-        </li>
-        <li>
-          <a href="./index.html">About</a>
-        </li>
-        <li align='left'>
-          <Button>Cart</Button>
-        </li>
-      </ul>
-    </nav>
+    
+    <header>
+      <div className="nav">
+        <a href="./index.html">Home</a>
+        <a href="./index.html">Store</a>
+        <a href="./index.html">About</a>
+        <button className="cart" onClick={props.onOpen}>
+          Cart
+        </button>
+      </div>
+    </header>
   );
 };
 export default Header;
