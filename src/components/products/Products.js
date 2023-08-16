@@ -28,10 +28,11 @@ const Products = () => {
         "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
     },
   ];
-
+  const cartCtx = useContext(Context);
   const addToCartHandler = (item) => {
-   
-};
+     const updatedItem = {...item, quantity: 1};
+     cartCtx.addItemToCart(updatedItem);
+ };
   const products = productsArr.map((item) => {
     return (
       <div key={item.title} className="products">
