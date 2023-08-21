@@ -1,16 +1,16 @@
 import React,{ useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link ,NavLink} from "react-router-dom";
 import "./Header.css";
-import Context from "../store/Context";
+import Context from "../ContextStore/Context";
 const Header = (props) => {
   const cartCtx =useContext(Context)
   return (
     
     <header>
       <div className="nav">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/store">Store</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <a href='/home'>Home</a>
+        <Link to='/store'>Store</Link>
+        <NavLink to='/about'>About</NavLink>
         <button className="cart" onClick={props.onOpen}>
           Cart
           <span className='cartSpan'>{cartCtx.quantity}</span>

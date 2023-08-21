@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Modal from "../UI/Modal";
 import "./Cart.css";
-import Context from "../store/Context";
+import Context from "../ContextStore/Context";
 const Cart = (props) => {
   const cartCtx = useContext(Context);
   let totalPrice = 0;

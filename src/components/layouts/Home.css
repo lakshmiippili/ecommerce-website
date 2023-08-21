@@ -1,0 +1,18 @@
+.albumButton{
+    background-color: rgb(184, 174, 194);
+    font-size: large;
+    padding: 10px 16px 10px 16px;
+    border: 1px solid lightblue;
+    cursor: pointer;
+}
+
+.albumDiv{
+    text-align: center;
+    margin: 20px 20px;
+}   
+
+h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}

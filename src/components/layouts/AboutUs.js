@@ -1,8 +1,9 @@
 import React from "react";
+import './AboutUs.css'
 const AboutUs = () => {
   return (
-    <div>
-      <div>About Page</div>
+    
+      <div className="about"><h2>About Page</h2>
       <p>
         Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
         sorrows, hates no prosecutors will unfold in the enduring of which were

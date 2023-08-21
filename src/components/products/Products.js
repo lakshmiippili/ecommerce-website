@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Context from "../store/Context";
+import Context from "../ContextStore/Context";
 import './Products.css'
 const Products = () => {
   const productsArr = [
