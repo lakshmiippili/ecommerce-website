@@ -1,5 +1,5 @@
 import React,{ useContext } from "react";
-import { Link ,NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import Context from "../ContextStore/Context";
 const Header = (props) => {
@@ -8,9 +8,10 @@ const Header = (props) => {
     
     <header>
       <div className="nav">
-        <a href='/home'>Home</a>
+        <Link to='/home'>Home</Link>
         <Link to='/store'>Store</Link>
-        <NavLink to='/about'>About</NavLink>
+        <Link to='/about'>About</Link>
+        <Link to='/contact'>Contact Us</Link>
         <button className="cart" onClick={props.onOpen}>
           Cart
           <span className='cartSpan'>{cartCtx.quantity}</span>

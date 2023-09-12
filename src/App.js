@@ -5,6 +5,7 @@ import MainNavigation from "./components/layouts/MainNavigation";
 import AboutUs from "./components/layouts/AboutUs";
 import Products from "./components/products/Products";
 import Home from "./components/layouts/Home";
+import ContactUs from "./components/layouts/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutUs />,
       },
+      {
+        path:'/contact',
+        element:<ContactUs/>
+      }
     ],
   },
 ]);
