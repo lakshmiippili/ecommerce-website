@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
+import { NavLink } from "react";
 import Context from "../ContextStore/Context";
-import './Products.css'
+import "./Products.css";
 const Products = () => {
   const productsArr = [
     {
@@ -30,25 +31,35 @@ const Products = () => {
   ];
   const cartCtx = useContext(Context);
   const addToCartHandler = (item) => {
-     const updatedItem = {...item, quantity: 1};
-     cartCtx.addItemToCart(updatedItem);
- };
+    const updatedItem = { ...item, quantity: 1 };
+    cartCtx.addItemToCart(updatedItem);
+  };
   const products = productsArr.map((item) => {
     return (
       <div key={item.title} className="products">
         <div className="product">
           <div className="productTitle">{item.title}</div>
-          <img src={item.imageURL} className="productImage" alt={item.title} />
-            <div className="priceAndCart">
+          <NavLink to={`/store/${JSON.stringify(item.id)}`}>
+            <img
+              src={item.imageURL}
+              alt={item.title}
+              className="productImage"
+            />
+          </NavLink>
+          <div className="priceAndCart">
             <div className="procudtPrice">{item.price}</div>
-            <button className='productButton' onClick={()=>addToCartHandler(item)}>Add To Cart</button>
+            <button
+              className="productButton"
+              onClick={() => addToCartHandler(item)}
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
-     
     );
   });
-  return (<div>{products}</div>);
+  return <div>{products}</div>;
 };
 
 export default Products;
